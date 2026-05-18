@@ -27,3 +27,7 @@ npm run build
 
 `.github/workflows/deploy.yml` にGitHub Pages用の自動公開設定を入れています。
 GitHubの Settings → Pages で Source を **GitHub Actions** にすると、mainブランチ更新時に自動公開されます。
+
+## Deploy note
+
+GitHub Pages source is set to GitHub Actions.
