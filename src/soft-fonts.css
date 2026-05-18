@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+
+:root {
+  font-family: 'Zen Maru Gothic', system-ui, sans-serif;
+}
+
+body,
+button,
+a,
+p,
+small,
+.nav,
+.eyebrow,
+.lead,
+.workCategory,
+.orderButton,
+.primaryButton,
+.secondaryButton,
+.contactBottom a {
+  font-family: 'Zen Maru Gothic', system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.brand,
+.heroTitle,
+.candleBody p,
+.workVisual span,
+.profileCard h2,
+.footer p {
+  font-family: 'Kaisei Decol', 'Zen Maru Gothic', serif;
+  font-weight: 700;
+}
+
+.heroTitle {
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.lead,
+.aboutText p,
+.sectionHead > p,
+.conceptCard p,
+.workContent p:last-child,
+.profileCard p:last-child,
+.messageBlock p:last-child,
+.contactBottom p {
+  font-weight: 500;
+  letter-spacing: 0.035em;
+}
+
+.eyebrow,
+.nav,
+.orderButton,
+.primaryButton,
+.secondaryButton,
+.contactBottom a,
+.workCategory,
+.visualTag,
+.workVisual p {
+  font-weight: 700;
+  letter-spacing: 0.28em;
+}
+
+.conceptCard h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.darkSection h2,
+.conceptSection h2,
+.worksTitle h2,
+.messageBlock h2,
+.contactSection h2 {
+  letter-spacing: -0.045em;
+}
