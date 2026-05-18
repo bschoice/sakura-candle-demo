@@ -24,7 +24,7 @@ function App() {
         <div className="heroInner">
           <div className="heroCopy">
             <p className="eyebrow">CANDLE ARTIST HARU</p>
-            <h1>火を、<br />飾る。</h1>
+            <h1 className="heroTitle"><span className="brandInitial">S</span>akura<br /><span className="brandInitial">C</span>andle</h1>
             <p className="lead">Sakura Candleは、キャンドルアーティストHaruが手がける架空の公式サイトです。桜のようにやわらかく、火のように静かに心へ残る、花と灯りのキャンドル作品を紹介します。</p>
             <div className="heroActions"><a href="#works" className="primaryButton">VIEW WORKS</a><a href="#about" className="secondaryButton">ABOUT HARU</a></div>
           </div>
