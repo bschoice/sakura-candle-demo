@@ -8,6 +8,12 @@
   margin-bottom: 58px;
 }
 
+.shopHead h2 {
+  font-size: clamp(42px, 4.7vw, 74px);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
 .shopGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -32,7 +38,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 320px;
+  min-height: 292px;
   overflow: hidden;
   background: linear-gradient(145deg, #f9dce4, #fff8f5);
 }
@@ -51,23 +57,23 @@
   top: 18px;
   color: rgba(255, 255, 255, 0.65);
   font-family: 'Noto Serif JP', serif;
-  font-size: 96px;
+  font-size: 88px;
   font-weight: 600;
   line-height: 1;
 }
 
 .shopCandle {
   position: relative;
-  width: 130px;
-  height: 190px;
+  width: 122px;
+  height: 178px;
 }
 
 .shopFlame {
   position: absolute;
   left: 50%;
   top: 0;
-  width: 34px;
-  height: 50px;
+  width: 32px;
+  height: 48px;
   border-radius: 999px;
   background: #f3a84a;
   box-shadow: 0 0 28px rgba(243, 168, 74, 0.66);
@@ -78,9 +84,9 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 120px;
-  height: 145px;
-  border-radius: 64px 64px 24px 24px;
+  width: 112px;
+  height: 136px;
+  border-radius: 60px 60px 24px 24px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 20px 40px rgba(33, 24, 21, 0.1);
   transform: translateX(-50%);
@@ -89,9 +95,9 @@
 .shopLabel {
   position: absolute;
   left: 50%;
-  bottom: 44px;
-  width: 70px;
-  height: 52px;
+  bottom: 42px;
+  width: 66px;
+  height: 48px;
   border: 1px solid rgba(184, 77, 102, 0.26);
   border-radius: 999px;
   background: rgba(248, 217, 223, 0.72);
@@ -109,9 +115,9 @@
 .shopShadow {
   position: absolute;
   left: 50%;
-  bottom: 46px;
-  width: 190px;
-  height: 18px;
+  bottom: 42px;
+  width: 178px;
+  height: 16px;
   border-radius: 50%;
   background: rgba(33, 24, 21, 0.1);
   filter: blur(8px);
@@ -119,7 +125,7 @@
 }
 
 .shopContent {
-  padding: 30px 30px 34px;
+  padding: 26px 30px 28px;
 }
 
 .shopMeta {
@@ -132,17 +138,14 @@
 }
 
 .shopContent h3 {
-  margin: 0;
+  margin: 0 0 22px;
   font-size: clamp(30px, 3vw, 38px);
   line-height: 1.2;
   letter-spacing: 0;
 }
 
 .shopContent p:not(.shopMeta) {
-  margin: 16px 0 24px;
-  color: #6c5a52;
-  font-size: 15px;
-  line-height: 1.9;
+  display: none;
 }
 
 .shopContent a {
@@ -168,6 +171,10 @@
   .shopSection {
     padding-top: 82px;
     padding-bottom: 82px;
+  }
+
+  .shopHead h2 {
+    font-size: clamp(42px, 10.5vw, 72px);
   }
 
   .shopGrid {
