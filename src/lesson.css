@@ -5,14 +5,21 @@
   gap: 56px;
 }
 
+/* オンラインショップ説明文と同じ読みやすさに統一 */
+.shopHead > p,
+.lessonIntro,
+.messageBlock p:last-child,
+.contactBottom p {
+  font-size: clamp(15px, 1.35vw, 18px);
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.01em;
+}
+
 .lessonIntro {
   max-width: 560px;
   margin: 0 0 12px;
   color: #6c5a52;
-  font-size: clamp(15px, 1.35vw, 18px);
-  font-weight: 500;
-  line-height: 2;
-  letter-spacing: 0.02em;
 }
 
 @media (max-width: 900px) {
