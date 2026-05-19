@@ -4,10 +4,10 @@ const works = [
   { category: 'GIFT', title: '贈る人の気持ちを、形にする。', text: '季節の花材や色を選び、誕生日・母の日・記念日に合わせた一点ものを制作。' },
 ]
 
-const concepts = [
-  ['01', '飾る', 'インテリアとして、空間に静かな華やかさを添えるキャンドル。'],
-  ['02', '灯す', '火を灯した瞬間、日常の時間が少しだけ特別に変わる。'],
-  ['03', '残す', '写真にも記憶にも残る、物語のあるキャンドルを届ける。'],
+const shopItems = [
+  { name: 'Sakura Bloom', text: '桜をイメージした、やわらかな色合いのキャンドル。', variant: 'pink' },
+  { name: 'Rose Whisper', text: 'ギフトにも選びやすい、上品で華やかなキャンドル。', variant: 'rose' },
+  { name: 'Moon Light', text: '静かな夜に寄り添う、落ち着いた雰囲気のキャンドル。', variant: 'ivory' },
 ]
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
     <main className="site">
       <header className="header">
         <a href="#top" className="brand">Sakura Candle</a>
-        <nav className="nav"><a href="#about">ABOUT</a><a href="#concept">CONCEPT</a><a href="#works">WORKS</a><a href="#contact">CONTACT</a></nav>
-        <a className="orderButton" href="#contact">ORDER</a>
+        <nav className="nav"><a href="#about">ABOUT</a><a href="#shop">SHOP</a><a href="#works">WORKS</a><a href="#contact">CONTACT</a></nav>
+        <a className="orderButton" href="#shop">ORDER</a>
       </header>
 
       <section id="top" className="hero">
@@ -34,7 +34,7 @@ function App() {
 
       <section id="about" className="darkSection"><div className="sectionGrid"><div><p className="eyebrow pink">ABOUT</p><h2>静かな時間を、<br />デザインする。</h2></div><div className="aboutText"><p>Haruは、花材・香り・色の重なりを大切にするキャンドルアーティスト。Sakura Candleでは、ただ美しいだけではなく、「飾っている時間」「灯している時間」「誰かに贈る時間」まで含めて、ひとつの作品として考えます。</p><p>このサイトは練習用の架空サイトです。実在のサービスではありませんが、個人アーティストの公式サイトとして使える構成・導線・コピーを想定しています。</p></div></div></section>
 
-      <section id="concept" className="conceptSection"><div className="sectionHead"><div><p className="eyebrow">CONCEPT</p><h2>灯りは、<br />小さな花束。</h2></div><p>Sakura Candleが大切にしているのは、作品そのものの美しさだけではありません。その人の暮らしに、どんな余白が生まれるかを考えています。</p></div><div className="conceptCards">{concepts.map(([num, title, text]) => <article className="conceptCard" key={num}><p className="num">{num}</p><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+      <section id="shop" className="shopSection"><div className="sectionHead shopHead"><div><p className="eyebrow">ONLINE SHOP</p><h2>お気に入りの灯りを、<br />見つける。</h2></div><p>Sakura Candleのオンラインショップでは、季節のキャンドルやギフト向けアイテムを紹介します。暮らしにそっと寄り添う灯りを、やさしく選べる場所です。</p></div><div className="shopGrid">{shopItems.map((item, index) => <article className={`shopCard ${item.variant}`} key={item.name}><div className="shopImage"><span className="shopNumber">0{index + 1}</span><div className="shopCandle"><span className="shopFlame" /><span className="shopWax" /><span className="shopLabel" /></div><span className="shopShadow" /></div><div className="shopContent"><p className="shopMeta">Sakura Candle</p><h3>{item.name}</h3><p>{item.text}</p><a href="#contact">ご注文はこちら</a></div></article>)}</div></section>
 
       <section id="works" className="worksSection"><div className="worksInner"><div className="worksTitle"><p className="eyebrow">WORKS</p><h2>作品と、<br />体験。</h2></div><div className="workList">{works.map((work, index) => <article className="workItem" key={work.category}><div className="workVisual"><p>{work.category}</p><span>0{index + 1}</span><div className="miniCandle" /><div className="miniFlame" /></div><div className="workContent"><p className="workCategory">{work.category}</p><h3>{work.title}</h3><p>{work.text}</p></div></article>)}</div></div></section>
 
