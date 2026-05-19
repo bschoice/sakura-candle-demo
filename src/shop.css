@@ -1,0 +1,176 @@
+.shopSection {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 112px clamp(20px, 5vw, 64px);
+}
+
+.shopHead {
+  margin-bottom: 58px;
+}
+
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.shopCard {
+  overflow: hidden;
+  border: 1px solid rgba(33, 24, 21, 0.1);
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 20px 60px rgba(184, 77, 102, 0.08);
+  transition: 0.28s ease;
+}
+
+.shopCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 76px rgba(184, 77, 102, 0.16);
+}
+
+.shopImage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f9dce4, #fff8f5);
+}
+
+.shopCard.rose .shopImage {
+  background: linear-gradient(145deg, #efd1d7, #fff6f5);
+}
+
+.shopCard.ivory .shopImage {
+  background: linear-gradient(145deg, #efe2cf, #fffaf3);
+}
+
+.shopNumber {
+  position: absolute;
+  right: 28px;
+  top: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.shopCandle {
+  position: relative;
+  width: 130px;
+  height: 190px;
+}
+
+.shopFlame {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 34px;
+  height: 50px;
+  border-radius: 999px;
+  background: #f3a84a;
+  box-shadow: 0 0 28px rgba(243, 168, 74, 0.66);
+  transform: translateX(-50%);
+}
+
+.shopWax {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 120px;
+  height: 145px;
+  border-radius: 64px 64px 24px 24px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(33, 24, 21, 0.1);
+  transform: translateX(-50%);
+}
+
+.shopLabel {
+  position: absolute;
+  left: 50%;
+  bottom: 44px;
+  width: 70px;
+  height: 52px;
+  border: 1px solid rgba(184, 77, 102, 0.26);
+  border-radius: 999px;
+  background: rgba(248, 217, 223, 0.72);
+  transform: translateX(-50%);
+}
+
+.shopCard.rose .shopLabel {
+  background: rgba(227, 183, 194, 0.74);
+}
+
+.shopCard.ivory .shopLabel {
+  background: rgba(232, 211, 183, 0.76);
+}
+
+.shopShadow {
+  position: absolute;
+  left: 50%;
+  bottom: 46px;
+  width: 190px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(33, 24, 21, 0.1);
+  filter: blur(8px);
+  transform: translateX(-50%);
+}
+
+.shopContent {
+  padding: 30px 30px 34px;
+}
+
+.shopMeta {
+  margin: 0 0 12px;
+  color: #b84d66;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.shopContent h3 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 38px);
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.shopContent p:not(.shopMeta) {
+  margin: 16px 0 24px;
+  color: #6c5a52;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.shopContent a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  width: 100%;
+  border-radius: 999px;
+  color: white;
+  background: #b84d66;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: 0.25s ease;
+}
+
+.shopContent a:hover {
+  background: #211815;
+}
+
+@media (max-width: 900px) {
+  .shopSection {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .shopGrid {
+    grid-template-columns: 1fr;
+  }
+}
