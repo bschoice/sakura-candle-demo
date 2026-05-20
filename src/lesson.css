@@ -22,6 +22,11 @@
   color: #6c5a52;
 }
 
+/* レッスン詳細の改行をそのまま表示 */
+.workContent p:last-child {
+  white-space: pre-line;
+}
+
 @media (max-width: 900px) {
   .lessonTitle {
     grid-template-columns: 1fr;
