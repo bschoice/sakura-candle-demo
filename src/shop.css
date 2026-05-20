@@ -51,6 +51,21 @@
   background: linear-gradient(145deg, #efe2cf, #fffaf3);
 }
 
+.shopProductImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.shopProductImage ~ .shopNumber,
+.shopProductImage ~ .shopCandle,
+.shopProductImage ~ .shopShadow {
+  display: none;
+}
+
 .shopNumber {
   position: absolute;
   right: 28px;
