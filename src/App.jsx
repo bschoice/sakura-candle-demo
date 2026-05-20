@@ -10,8 +10,8 @@ import sakura07 from '../sakura07.png'
 
 const works = [
   { category: 'Gradation Candle', title: 'グラデーションキャンドル', text: '料金　　　３,０００円\n所要時間　９０分', image: sakura04 },
-  { category: 'Botanical Candle', title: 'ボタニカルキャンドル', text: '料金　　　３,０００円\n所要時間　９０分', image: sakura05 },
-  { category: 'Gel Candle', title: 'ぷるぷるキャンドル', text: '料金　　　３,０００円\n所要時間　９０分', image: sakura06 },
+  { category: 'Botanical Candle', title: 'ボタニカルキャンドル', mobileTitle: ['ボタニカル', 'キャンドル'], text: '料金　　　３,０００円\n所要時間　９０分', image: sakura05 },
+  { category: 'Gel Candle', title: 'ぷるぷるキャンドル', mobileTitle: ['ぷるぷる', 'キャンドル'], text: '料金　　　３,０００円\n所要時間　９０分', image: sakura06 },
 ]
 
 const shopItems = [
@@ -54,6 +54,20 @@ function SocialIcon({ name }) {
   )
 }
 
+function WorkTitle({ work }) {
+  if (!work.mobileTitle) {
+    return <>{work.title}</>
+  }
+
+  return (
+    <>
+      <span>{work.mobileTitle[0]}</span>
+      <br className="mobileOnlyBreak" />
+      <span>{work.mobileTitle[1]}</span>
+    </>
+  )
+}
+
 function App() {
   return (
     <main className="site">
@@ -80,7 +94,7 @@ function App() {
 
       <section id="shop" className="shopSection"><div className="sectionHead shopHead"><div><p className="eyebrow">ONLINE SHOP</p><h2>オンラインショップ</h2></div><p>Sakura Candleのオンラインショップでは、季節のキャンドルやギフト向けアイテムを紹介します。暮らしにそっと寄り添う灯りを、やさしく選べる場所です。</p></div><div className="shopGrid">{shopItems.map((item) => <article className={`shopCard ${item.variant}`} key={item.name}><div className="shopImage"><img className="shopProductImage" src={item.image} alt={`${item.name}のキャンドル画像`} /></div><div className="shopContent"><p className="shopMeta">Sakura Candle</p><h3>{item.name}</h3><a href="#contact">ご注文はこちら</a></div></article>)}</div></section>
 
-      <section id="works" className="worksSection"><div className="worksInner"><div className="worksTitle lessonTitle"><div><p className="eyebrow">LESSON</p><h2>レッスン</h2></div><p className="lessonIntro">初心者の方も多くご参加いただいています。<br />楽しく作ることを第一に、特別な時間をお過ごしください。</p></div><div className="workList">{works.map((work) => <article className="workItem" key={work.category}><div className="workVisual lessonImageVisual"><img className="workImage" src={work.image} alt={`${work.title}のレッスン画像`} /></div><div className="workContent"><p className="workCategory">{work.category}</p><h3>{work.title}</h3><p>{work.text}</p></div></article>)}</div></div></section>
+      <section id="works" className="worksSection"><div className="worksInner"><div className="worksTitle lessonTitle"><div><p className="eyebrow">LESSON</p><h2>レッスン</h2></div><p className="lessonIntro">初心者の方も多くご参加いただいています。<br />楽しく作ることを第一に、特別な時間をお過ごしください。</p></div><div className="workList">{works.map((work) => <article className="workItem" key={work.category}><div className="workVisual lessonImageVisual"><img className="workImage" src={work.image} alt={`${work.title}のレッスン画像`} /></div><div className="workContent"><p className="workCategory">{work.category}</p><h3><WorkTitle work={work} /></h3><p>{work.text}</p></div></article>)}</div></div></section>
 
       <section className="profileSection"><div className="profileCard profileImageCard"><img className="profileImage" src={sakura07} alt="キャンドルアーティストHaruのプロフィール画像" /></div><div className="profileDetails"><p className="eyebrow">PROFILE</p><h2>プロフィール</h2><dl><div><dt>講師</dt><dd>Haru</dd></div><div><dt>経歴</dt><dd>キャンドルアーティストとして作品制作・レッスンを行い、花材・色・香りを活かしたオリジナルキャンドルを制作。</dd></div></dl></div></section>
 
