@@ -1,3 +1,5 @@
+import heroImage from '../18_40_55.png'
+
 const works = [
   { category: 'Gradation Candle', title: 'グラデーションキャンドル', text: '料金　　　３,０００円\n所要時間　９０分' },
   { category: 'Botanical Candle', title: 'ボタニカルキャンドル', text: '料金　　　３,０００円\n所要時間　９０分' },
@@ -62,7 +64,7 @@ function App() {
             <p className="lead">Sakura Candleは、キャンドルアーティストHaruが手がける架空の公式サイトです。桜のようにやわらかく、火のように静かに心へ残る、花と灯りのキャンドル作品を紹介します。</p>
             <div className="heroActions"><a href="#works" className="primaryButton">VIEW LESSON</a><a href="#about" className="secondaryButton">ABOUT HARU</a></div>
           </div>
-          <div className="visualWrap"><div className="visualCard"><div className="visualTag">SAKURA 2026</div><div className="flameOuter" /><div className="flameInner" /><div className="candleBody"><div className="flowerMark" /><p>Haru</p></div><div className="shadow" /></div></div>
+          <div className="visualWrap"><div className="visualCard imageCard"><img className="heroImage" src={heroImage} alt="Sakura Candleのメインビジュアル" /></div></div>
         </div>
       </section>
 
