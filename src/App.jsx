@@ -1,4 +1,5 @@
 import heroImage from '../18_40_55.png'
+import accessImage from '../8_42_01.png'
 import sakura01 from '../sakura01.png'
 import sakura02 from '../sakura02.png'
 import sakura03 from '../sakura03.png'
@@ -85,7 +86,7 @@ function App() {
 
       <section id="social" className="socialSection"><div className="socialInner"><div className="socialHead"><div><p className="eyebrow">SNS</p><h2>SNS</h2></div><p className="socialLead">新作キャンドル、レッスンの様子、季節の灯りの楽しみ方を発信しています。気になる場所から、Sakura Candleの世界をのぞいてみてください。</p></div><div className="socialGrid">{socialLinks.map((social) => <a className={`socialCard socialCard-${social.name.toLowerCase()}`} href={social.href} key={social.name} target="_blank" rel="noreferrer"><div className="socialIcon"><SocialIcon name={social.name} /></div><h3>{social.label}</h3></a>)}</div></div></section>
 
-      <section id="access" className="accessSection"><div className="accessInner"><div className="accessHead"><p className="eyebrow">ACCESS</p><h2>アクセス</h2></div><div className="accessCard"><div className="accessMap"><p>Yame / Fukuoka</p></div><dl><div><dt>所在地</dt><dd>福岡県八女市近郊</dd></div><div><dt>営業時間</dt><dd>10:00 - 17:00</dd></div><div><dt>電話番号</dt><dd>0943-00-0000</dd></div><div><dt>メール</dt><dd>info@sakura-candle.example.com</dd></div><div><dt>駐車場</dt><dd>ご予約時にご案内します</dd></div></dl></div></div></section>
+      <section id="access" className="accessSection"><div className="accessInner"><div className="accessHead"><p className="eyebrow">ACCESS</p><h2>アクセス</h2></div><div className="accessCard"><div className="accessMap"><img className="accessImage" src={accessImage} alt="アクセスのイメージ画像" /></div><dl><div><dt>所在地</dt><dd>福岡県八女市近郊</dd></div><div><dt>営業時間</dt><dd>10:00 - 17:00</dd></div><div><dt>電話番号</dt><dd>0943-00-0000</dd></div><div><dt>メール</dt><dd>info@sakura-candle.example.com</dd></div><div><dt>駐車場</dt><dd>ご予約時にご案内します</dd></div></dl></div></div></section>
 
       <section id="contact" className="contactSection"><div className="contactGlow" /><div className="contactInner"><p className="eyebrow white">CONTACT</p><h2>お問い合わせ</h2><div className="contactBottom"><p>オーダー制作、レッスン、イベント装飾のご相談はこちらから。架空サイトのため、ボタンはデザイン確認用です。</p><a href="mailto:hello@example.com">SEND MESSAGE</a></div></div></section>
 
