@@ -1,0 +1,123 @@
+.socialSection {
+  position: relative;
+  overflow: hidden;
+  background: #fbf7f2;
+}
+
+.socialSection::before {
+  content: '';
+  position: absolute;
+  right: -120px;
+  top: 72px;
+  width: 360px;
+  height: 360px;
+  border-radius: 999px;
+  background: rgba(245, 201, 211, 0.55);
+  filter: blur(80px);
+}
+
+.socialInner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 104px clamp(20px, 5vw, 64px);
+}
+
+.socialHead {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 56px;
+  align-items: end;
+}
+
+.socialHead h2 {
+  margin: 0;
+  font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  font-size: clamp(42px, 4.7vw, 74px);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
+.socialLead {
+  max-width: 600px;
+  margin: 34px 0 0 auto;
+  color: #6c5a52;
+  font-size: clamp(15px, 1.35vw, 18px);
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.01em;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 54px;
+}
+
+.socialCard {
+  display: block;
+  min-height: 260px;
+  padding: 32px;
+  border: 1px solid rgba(33, 24, 21, 0.1);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 20px 60px rgba(184, 77, 102, 0.08);
+  transition: 0.28s ease;
+}
+
+.socialCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 76px rgba(184, 77, 102, 0.16);
+}
+
+.socialCard span {
+  color: #b84d66;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.socialCard h3 {
+  margin: 48px 0 16px;
+  font-size: clamp(26px, 2.8vw, 34px);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.socialCard p {
+  margin: 0;
+  color: #6c5a52;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.socialCard em {
+  display: inline-flex;
+  margin-top: 28px;
+  color: #b84d66;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+@media (max-width: 900px) {
+  .socialInner {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .socialHead,
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .socialLead {
+    margin-left: 0;
+  }
+}
