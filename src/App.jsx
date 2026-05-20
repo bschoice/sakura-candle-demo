@@ -11,9 +11,9 @@ const shopItems = [
 ]
 
 const socialLinks = [
-  { name: 'Instagram', label: '@sakura_candle', href: '#' },
-  { name: 'YouTube', label: 'Sakura Candle Channel', href: '#' },
-  { name: 'LINE', label: 'Lesson Information', href: '#' },
+  { name: 'Instagram', label: 'Instagram', href: '#' },
+  { name: 'YouTube', label: 'You tube', href: '#' },
+  { name: 'LINE', label: 'LINE', href: '#' },
 ]
 
 function SocialIcon({ name }) {
@@ -39,9 +39,10 @@ function SocialIcon({ name }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true">
       <path d="M32 14C20.4 14 11 21.8 11 31.4C11 40 18.5 47.2 28.7 48.5L26.6 55L35.7 49C47.3 48.1 53 40.5 53 31.4C53 21.8 43.6 14 32 14Z" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinejoin="round" />
-      <path d="M23 28V37H28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M31 28V37" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-      <path d="M35 37V28L42 37V28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M19 28V37H24" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M28 28V37" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" />
+      <path d="M32 37V28L39 37V28" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M44 28V37M44 28H50M44 32.5H49M44 37H50" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
@@ -76,7 +77,7 @@ function App() {
 
       <section className="profileSection"><div className="profileCard"><p className="eyebrow pink">PROFILE</p><h2>Haru</h2><p>花と香りをテーマに制作するキャンドルアーティスト。やさしい色づかいと、余白のあるデザインを得意とする。</p></div><div className="messageBlock"><p className="eyebrow">MESSAGE</p><h2>ふつうの日に、<br />少しだけ詩を。</h2><p>特別な日だけではなく、なんでもない夜にもキャンドルを灯してほしい。Sakura Candleは、そんな小さな願いから生まれました。作品を通して、暮らしの中に静かな美しさを届けます。</p></div></section>
 
-      <section id="social" className="socialSection"><div className="socialInner"><div className="socialHead"><div><p className="eyebrow">SNS</p><h2>SNS</h2></div><p className="socialLead">新作キャンドル、レッスンの様子、季節の灯りの楽しみ方を発信しています。気になる場所から、Sakura Candleの世界をのぞいてみてください。</p></div><div className="socialGrid">{socialLinks.map((social) => <a className={`socialCard socialCard-${social.name.toLowerCase()}`} href={social.href} key={social.name} target="_blank" rel="noreferrer"><div className="socialIcon"><SocialIcon name={social.name} /></div><span>{social.name}</span><h3>{social.label}</h3><em>VIEW SNS</em></a>)}</div></div></section>
+      <section id="social" className="socialSection"><div className="socialInner"><div className="socialHead"><div><p className="eyebrow">SNS</p><h2>SNS</h2></div><p className="socialLead">新作キャンドル、レッスンの様子、季節の灯りの楽しみ方を発信しています。気になる場所から、Sakura Candleの世界をのぞいてみてください。</p></div><div className="socialGrid">{socialLinks.map((social) => <a className={`socialCard socialCard-${social.name.toLowerCase()}`} href={social.href} key={social.name} target="_blank" rel="noreferrer"><div className="socialIcon"><SocialIcon name={social.name} /></div><h3>{social.label}</h3></a>)}</div></div></section>
 
       <section id="contact" className="contactSection"><div className="contactGlow" /><div className="contactInner"><p className="eyebrow white">CONTACT</p><h2>あなたの時間に、<br />灯りを咲かせる。</h2><div className="contactBottom"><p>オーダー制作、レッスン、イベント装飾のご相談はこちらから。架空サイトのため、ボタンはデザイン確認用です。</p><a href="mailto:hello@example.com">SEND MESSAGE</a></div></div></section>
 
