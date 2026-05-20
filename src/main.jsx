@@ -5,6 +5,7 @@ import './soft-fonts.css'
 import './shop.css'
 import './lesson.css'
 import './social.css'
+import './profile.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
