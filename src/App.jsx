@@ -1,6 +1,6 @@
 const works = [
   { category: 'Gradation Candle', title: 'グラデーションキャンドル', text: '料金　　　３,０００円\n所要時間　９０分' },
-  { category: 'LESSON', title: 'つくる時間まで、美しく。', text: '初心者でも楽しめる少人数制レッスン。火を灯す前から、心がほどける体験を。' },
+  { category: 'Botanical Candle', title: 'ボタニカルキャンドル', text: '料金　　　３,０００円\n所要時間　９０分' },
   { category: 'GIFT', title: '贈る人の気持ちを、形にする。', text: '季節の花材や色を選び、誕生日・母の日・記念日に合わせた一点ものを制作。' },
 ]
 
