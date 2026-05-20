@@ -26,6 +26,15 @@ const socialLinks = [
   { name: 'LINE', label: 'LINE', href: '#' },
 ]
 
+const menuLinks = [
+  { label: 'ABOUT', href: '#about' },
+  { label: 'SHOP', href: '#shop' },
+  { label: 'LESSON', href: '#works' },
+  { label: 'SNS', href: '#social' },
+  { label: 'ACCESS', href: '#access' },
+  { label: 'CONTACT', href: '#contact' },
+]
+
 function SocialIcon({ name }) {
   if (name === 'Instagram') {
     return (
@@ -74,7 +83,15 @@ function App() {
       <header className="header">
         <a href="#top" className="brand">Sakura Candle</a>
         <nav className="nav"><a href="#about">ABOUT</a><a href="#shop">SHOP</a><a href="#works">LESSON</a><a href="#social">SNS</a><a href="#access">ACCESS</a><a href="#contact">CONTACT</a></nav>
-        <a className="orderButton" href="#shop">ORDER</a>
+        <div className="headerAction">
+          <a className="orderButton desktopOrder" href="#shop">ORDER</a>
+          <details className="mobileMenu">
+            <summary>MENU</summary>
+            <div className="mobileMenuPanel">
+              {menuLinks.map((link) => <a href={link.href} key={link.href}>{link.label}</a>)}
+            </div>
+          </details>
+        </div>
       </header>
 
       <section id="top" className="hero">
