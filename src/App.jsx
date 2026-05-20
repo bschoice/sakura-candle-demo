@@ -38,11 +38,8 @@ function SocialIcon({ name }) {
 
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true">
-      <path d="M32 14C20.4 14 11 21.8 11 31.4C11 40 18.5 47.2 28.7 48.5L26.6 55L35.7 49C47.3 48.1 53 40.5 53 31.4C53 21.8 43.6 14 32 14Z" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinejoin="round" />
-      <path d="M19 28V37H24" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M28 28V37" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" />
-      <path d="M32 37V28L39 37V28" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M44 28V37M44 28H50M44 32.5H49M44 37H50" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M32 14C20.7 14 11.5 21.5 11.5 30.9C11.5 39.5 19 46.4 28.7 47.8L27 53.8L35.6 48.9C46.5 48.3 52.5 41.2 52.5 30.9C52.5 21.5 43.3 14 32 14Z" fill="none" stroke="currentColor" strokeWidth="3.4" strokeLinejoin="round" />
+      <text x="32" y="35.6" textAnchor="middle" dominantBaseline="middle" fontSize="9.6" fontWeight="900" fontFamily="Noto Sans JP, system-ui, sans-serif" letterSpacing="0.02em" fill="currentColor">LINE</text>
     </svg>
   )
 }
