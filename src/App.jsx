@@ -58,7 +58,7 @@ function App() {
     <main className="site">
       <header className="header">
         <a href="#top" className="brand">Sakura Candle</a>
-        <nav className="nav"><a href="#about">ABOUT</a><a href="#shop">SHOP</a><a href="#works">LESSON</a><a href="#social">SNS</a><a href="#contact">CONTACT</a></nav>
+        <nav className="nav"><a href="#about">ABOUT</a><a href="#shop">SHOP</a><a href="#works">LESSON</a><a href="#social">SNS</a><a href="#access">ACCESS</a><a href="#contact">CONTACT</a></nav>
         <a className="orderButton" href="#shop">ORDER</a>
       </header>
 
@@ -84,6 +84,8 @@ function App() {
       <section className="profileSection"><div className="profileCard profileImageCard"><img className="profileImage" src={sakura07} alt="キャンドルアーティストHaruのプロフィール画像" /></div><div className="profileDetails"><p className="eyebrow">PROFILE</p><h2>プロフィール</h2><dl><div><dt>講師</dt><dd>Haru</dd></div><div><dt>経歴</dt><dd>キャンドルアーティストとして作品制作・レッスンを行い、花材・色・香りを活かしたオリジナルキャンドルを制作。</dd></div></dl></div></section>
 
       <section id="social" className="socialSection"><div className="socialInner"><div className="socialHead"><div><p className="eyebrow">SNS</p><h2>SNS</h2></div><p className="socialLead">新作キャンドル、レッスンの様子、季節の灯りの楽しみ方を発信しています。気になる場所から、Sakura Candleの世界をのぞいてみてください。</p></div><div className="socialGrid">{socialLinks.map((social) => <a className={`socialCard socialCard-${social.name.toLowerCase()}`} href={social.href} key={social.name} target="_blank" rel="noreferrer"><div className="socialIcon"><SocialIcon name={social.name} /></div><h3>{social.label}</h3></a>)}</div></div></section>
+
+      <section id="access" className="accessSection"><div className="accessInner"><div className="accessHead"><p className="eyebrow">ACCESS</p><h2>アクセス</h2><p>レッスン会場・お受け取り場所のご案内です。詳細な住所はご予約確定後にお知らせします。</p></div><div className="accessCard"><div className="accessMap"><span>Sakura Candle</span><p>Yame / Fukuoka</p></div><dl><div><dt>所在地</dt><dd>福岡県八女市近郊</dd></div><div><dt>営業時間</dt><dd>10:00 - 17:00</dd></div><div><dt>駐車場</dt><dd>ご予約時にご案内します</dd></div></dl></div></div></section>
 
       <section id="contact" className="contactSection"><div className="contactGlow" /><div className="contactInner"><p className="eyebrow white">CONTACT</p><h2>お問い合わせ</h2><div className="contactBottom"><p>オーダー制作、レッスン、イベント装飾のご相談はこちらから。架空サイトのため、ボタンはデザイン確認用です。</p><a href="mailto:hello@example.com">SEND MESSAGE</a></div></div></section>
 
