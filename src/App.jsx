@@ -1,7 +1,7 @@
 const works = [
   { category: 'Gradation Candle', title: 'グラデーションキャンドル', text: '料金　　　３,０００円\n所要時間　９０分' },
   { category: 'Botanical Candle', title: 'ボタニカルキャンドル', text: '料金　　　３,０００円\n所要時間　９０分' },
-  { category: 'GIFT', title: '贈る人の気持ちを、形にする。', text: '季節の花材や色を選び、誕生日・母の日・記念日に合わせた一点ものを制作。' },
+  { category: 'Gel Candle', title: 'ぷるぷるキャンドル', text: '料金　　　３,０００円\n所要時間　９０分' },
 ]
 
 const shopItems = [
