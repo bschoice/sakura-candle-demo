@@ -7,9 +7,9 @@ const works = [
 ]
 
 const shopItems = [
-  { name: 'Sakura Bloom', variant: 'pink' },
-  { name: 'Rose Whisper', variant: 'rose' },
-  { name: 'Moon Light', variant: 'ivory' },
+  { name: 'Sakura Bloom', variant: 'pink', image: 'https://raw.githubusercontent.com/bschoice/sakura-candle-demo/main/sakura01.png' },
+  { name: 'Rose Whisper', variant: 'rose', image: 'https://raw.githubusercontent.com/bschoice/sakura-candle-demo/main/sakura02.png' },
+  { name: 'Moon Light', variant: 'ivory', image: 'https://raw.githubusercontent.com/bschoice/sakura-candle-demo/main/sakura03.png' },
 ]
 
 const socialLinks = [
@@ -70,7 +70,7 @@ function App() {
 
       <section id="about" className="darkSection"><div className="sectionGrid"><div><p className="eyebrow pink">ABOUT</p><h2>静かな時間を、<br />デザインする。</h2></div><div className="aboutText"><p>Haruは、花材・香り・色の重なりを大切にするキャンドルアーティスト。Sakura Candleでは、ただ美しいだけではなく、「飾っている時間」「灯している時間」「誰かに贈る時間」まで含めて、ひとつの作品として考えます。</p><p>このサイトは練習用の架空サイトです。実在のサービスではありませんが、個人アーティストの公式サイトとして使える構成・導線・コピーを想定しています。</p></div></div></section>
 
-      <section id="shop" className="shopSection"><div className="sectionHead shopHead"><div><p className="eyebrow">ONLINE SHOP</p><h2>オンラインショップ</h2></div><p>Sakura Candleのオンラインショップでは、季節のキャンドルやギフト向けアイテムを紹介します。暮らしにそっと寄り添う灯りを、やさしく選べる場所です。</p></div><div className="shopGrid">{shopItems.map((item, index) => <article className={`shopCard ${item.variant}`} key={item.name}><div className="shopImage"><span className="shopNumber">0{index + 1}</span><div className="shopCandle"><span className="shopFlame" /><span className="shopWax" /><span className="shopLabel" /></div><span className="shopShadow" /></div><div className="shopContent"><p className="shopMeta">Sakura Candle</p><h3>{item.name}</h3><a href="#contact">ご注文はこちら</a></div></article>)}</div></section>
+      <section id="shop" className="shopSection"><div className="sectionHead shopHead"><div><p className="eyebrow">ONLINE SHOP</p><h2>オンラインショップ</h2></div><p>Sakura Candleのオンラインショップでは、季節のキャンドルやギフト向けアイテムを紹介します。暮らしにそっと寄り添う灯りを、やさしく選べる場所です。</p></div><div className="shopGrid">{shopItems.map((item, index) => <article className={`shopCard ${item.variant}`} key={item.name}><div className="shopImage"><img className="shopProductImage" src={item.image} alt={`${item.name}のキャンドル画像`} onError={(event) => { event.currentTarget.style.display = 'none' }} /><span className="shopNumber">0{index + 1}</span><div className="shopCandle"><span className="shopFlame" /><span className="shopWax" /><span className="shopLabel" /></div><span className="shopShadow" /></div><div className="shopContent"><p className="shopMeta">Sakura Candle</p><h3>{item.name}</h3><a href="#contact">ご注文はこちら</a></div></article>)}</div></section>
 
       <section id="works" className="worksSection"><div className="worksInner"><div className="worksTitle lessonTitle"><div><p className="eyebrow">LESSON</p><h2>レッスン</h2></div><p className="lessonIntro">初心者の方も多くご参加いただいています。<br />楽しく作ることを第一に、特別な時間をお過ごしください。</p></div><div className="workList">{works.map((work, index) => <article className="workItem" key={work.category}><div className="workVisual"><p>{work.category}</p><span>0{index + 1}</span><div className="miniCandle" /><div className="miniFlame" /></div><div className="workContent"><p className="workCategory">{work.category}</p><h3>{work.title}</h3><p>{work.text}</p></div></article>)}</div></div></section>
 
