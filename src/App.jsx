@@ -5,6 +5,7 @@ import sakura03 from '../sakura03.png'
 import sakura04 from '../sakura04.png'
 import sakura05 from '../sakura05.png'
 import sakura06 from '../sakura06.png'
+import sakura07 from '../sakura07.png'
 
 const works = [
   { category: 'Gradation Candle', title: 'グラデーションキャンドル', text: '料金　　　３,０００円\n所要時間　９０分', image: sakura04 },
@@ -80,7 +81,7 @@ function App() {
 
       <section id="works" className="worksSection"><div className="worksInner"><div className="worksTitle lessonTitle"><div><p className="eyebrow">LESSON</p><h2>レッスン</h2></div><p className="lessonIntro">初心者の方も多くご参加いただいています。<br />楽しく作ることを第一に、特別な時間をお過ごしください。</p></div><div className="workList">{works.map((work) => <article className="workItem" key={work.category}><div className="workVisual lessonImageVisual"><img className="workImage" src={work.image} alt={`${work.title}のレッスン画像`} /></div><div className="workContent"><p className="workCategory">{work.category}</p><h3>{work.title}</h3><p>{work.text}</p></div></article>)}</div></div></section>
 
-      <section className="profileSection"><div className="profileCard"><p className="eyebrow pink">PROFILE</p><h2>Haru</h2><p>花と香りをテーマに制作するキャンドルアーティスト。やさしい色づかいと、余白のあるデザインを得意とする。</p></div><div className="profileDetails"><p className="eyebrow">PROFILE</p><h2>プロフィール</h2><dl><div><dt>講師</dt><dd>Haru</dd></div><div><dt>経歴</dt><dd>キャンドルアーティストとして作品制作・レッスンを行い、花材・色・香りを活かしたオリジナルキャンドルを制作。</dd></div></dl></div></section>
+      <section className="profileSection"><div className="profileCard profileImageCard"><img className="profileImage" src={sakura07} alt="キャンドルアーティストHaruのプロフィール画像" /></div><div className="profileDetails"><p className="eyebrow">PROFILE</p><h2>プロフィール</h2><dl><div><dt>講師</dt><dd>Haru</dd></div><div><dt>経歴</dt><dd>キャンドルアーティストとして作品制作・レッスンを行い、花材・色・香りを活かしたオリジナルキャンドルを制作。</dd></div></dl></div></section>
 
       <section id="social" className="socialSection"><div className="socialInner"><div className="socialHead"><div><p className="eyebrow">SNS</p><h2>SNS</h2></div><p className="socialLead">新作キャンドル、レッスンの様子、季節の灯りの楽しみ方を発信しています。気になる場所から、Sakura Candleの世界をのぞいてみてください。</p></div><div className="socialGrid">{socialLinks.map((social) => <a className={`socialCard socialCard-${social.name.toLowerCase()}`} href={social.href} key={social.name} target="_blank" rel="noreferrer"><div className="socialIcon"><SocialIcon name={social.name} /></div><h3>{social.label}</h3></a>)}</div></div></section>
 
